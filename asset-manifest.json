@@ -1,8 +1,7 @@
 {
   "files": {
-    "main.css": "/dual-use/static/css/main.86bcb413.css",
-    "main.js": "/dual-use/static/js/main.62e66402.js",
-    "static/js/206.988e2cfb.chunk.js": "/dual-use/static/js/206.988e2cfb.chunk.js",
+    "main.css": "/dual-use/static/css/main.f2cba258.css",
+    "main.js": "/dual-use/static/js/main.64532695.js",
     "static/media/BennettTextFour.otf": "/dual-use/static/media/BennettTextFour.cef41b7bf52fedcce7c6.otf",
     "static/media/map_group.svg": "/dual-use/static/media/map_group.91091694a7e689f8d3e2a3cee902b866.svg",
     "static/media/background.svg": "/dual-use/static/media/background.1bc2a128ace5a856138b2855a2f0047b.svg",
@@ -11,7 +10,7 @@
     "index.html": "/dual-use/index.html"
   },
   "entrypoints": [
-    "static/css/main.86bcb413.css",
-    "static/js/main.62e66402.js"
+    "static/css/main.f2cba258.css",
+    "static/js/main.64532695.js"
   ]
 }

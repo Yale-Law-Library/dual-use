@@ -168,7 +168,6 @@ font-family: "Bennett Text";
 function App() {
   const componentRef = useRef(null);
   const { width } = useContainerDimensions(componentRef);
-  console.log(width);
   const isColumn = width < 1430;
   const isMobile = width < 800;
   const [hoveredQuarter, setHoveredQuarter] = useState("");

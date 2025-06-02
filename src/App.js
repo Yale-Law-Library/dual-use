@@ -1,4 +1,3 @@
-import './App.css';
 import LineChart from './LineChart';
 import { GlobalStyles } from './GlobalStyles';
 import CategoryBubbleChart from './CategoryBubbleChart';

@@ -165,11 +165,11 @@ export default function CategoryBubbleChart(props) {
                   <CircleContainer style={{ opacity: hoveredQuarter === "" || hoveredQuarter === d.quarter ? 1 : .3 }} onMouseMove={() => setHoveredQuarter(d.quarter)} onMouseLeave={() => setHoveredQuarter("")} key={`${category}-${d.quarter}`}>
                     <QuarterLabel offset={-5}>{label[0]}</QuarterLabel>
                     <QuarterLabel offset={maxRadiiByCategory[category] / 2}>{label[1]}</QuarterLabel>
-                    <CircleStack >
+                    {count !== 0 && <CircleStack >
                       <BlurredCircle size={size} color={color} />
                       <OutlineCircle size={size} color={color} />
                       <CenterDot color={color} />
-                    </CircleStack>
+                    </CircleStack>}
                     <CountLabel color={color} offset={maxRadiiByCategory[category] / 2}>{count}</CountLabel>
                   </CircleContainer>
                 );

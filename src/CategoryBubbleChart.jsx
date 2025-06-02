@@ -111,7 +111,7 @@ const colorMap = {
 };
 
 export default function CategoryBubbleChart(props) {
-  const { data, sizeScale, hoveredQuarter, setHoveredQuarter, hoverCategories } = props;
+  const { data, sizeScale, hoveredQuarter, setHoveredQuarter, hoverCategories, isMobile } = props;
   const categories = Array.from(
     new Set(data.flatMap(d => d.categories.map(c => c.name)))
   ).sort((a, b) => {
@@ -138,7 +138,7 @@ export default function CategoryBubbleChart(props) {
   });
 
   return (
-    <GridWrapper>
+    <GridWrapper style={{ width: isMobile ? "370px" : "550px" }}>
       {categories.filter((c) => hoverCategories.length === 0 || hoverCategories.includes(c)).map((category, i) => {
         const maxCategorySize = Math.max(
           ...data.map(d => {

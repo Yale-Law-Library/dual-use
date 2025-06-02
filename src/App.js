@@ -9,8 +9,9 @@ import styled from 'styled-components';
 import mapUrl from './assets/map_group.svg';
 import mapSelectedURL from './assets/Map_selected_outline.svg';
 import Vector from "./assets/Vector.svg";
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import backgroudUrl from "./assets/background.svg";
+import { useContainerDimensions } from './ContainerDimensions';
 
 const RightPanel = styled.div`
   display: flex;
@@ -49,6 +50,11 @@ font-weight: 600;
 line-height: normal;
 `;
 
+const RaqqaIndicatorMobile = styled.img`
+  position:absolute;
+  top:118px;
+  left: 296px;
+`;
 const RaqqaIndicator = styled.img`
   position:absolute;
   top:118px;
@@ -133,6 +139,8 @@ width: 700px;
 flex-direction:column;
 `;
 
+
+
 const ArticleTitle = styled.div`
 font-family: 'Bennett Text', Georgia, serif;
 color: #FFF;
@@ -158,6 +166,11 @@ font-family: "Bennett Text";
 
 
 function App() {
+  const componentRef = useRef(null);
+  const { width } = useContainerDimensions(componentRef);
+  console.log(width);
+  const isColumn = width < 1430;
+  const isMobile = width < 800;
   const [hoveredQuarter, setHoveredQuarter] = useState("");
   const [hoverCategories, setHoverCategories] = useState([]);
   const [selectedName, setSelectedName] = useState("all");
@@ -187,15 +200,15 @@ function App() {
     }
   };
   return (
-    <ScrollWrapper>
-      <AppContainer className="App">
+    <ScrollWrapper style={{ overflowX: 'hidden' }}>
+      <AppContainer className="App" ref={componentRef}>
 
-        <AppHeader>
-          <img height={700} src={backgroudUrl} alt="map" />
+        <AppHeader style={{ isMobile }}>
+          <img height={isMobile ? 350 : 700} width={isMobile ? 350 : ""} src={backgroudUrl} alt="map" />
           <Circle></Circle>
-          <HeaderText>
-            <ArticleTitle>The Rise of “Dual-Use” Objects in War </ArticleTitle>
-            <BodyText><span>
+          <HeaderText style={isMobile ? { width: 350, top: "24px", left: "calc(50% - 175px)" } : {}}>
+            <ArticleTitle style={{ fontSize: isMobile ? "26px" : "32px" }}>The Rise of “Dual-Use” Objects in War </ArticleTitle>
+            <BodyText style={{ fontSize: isMobile ? "11px" : "14px" }}><span>
               <a
                 style={{ color: "#000" }}
                 href="https://law.yale.edu/oona-hathaway"
@@ -228,44 +241,52 @@ function App() {
 
 
 
-        <ContentContainer>
+        <ContentContainer style={{ flexDirection: isColumn ? 'column' : 'row' }}>
           <MapContainer>
             <div style={{ position: "sticky", top: 0 }}>
               <div style={{ position: "relative" }}>
-                <img height={700} src={mapUrl} alt="map" />
-                {selectedName === "all" && <img style={{ position: "absolute", top: 0, left: 0 }} height={700} src={mapSelectedURL} alt="map" />}
+                <img height={isMobile ? 350 : 700} src={mapUrl} alt="map" />
+                {selectedName === "all" && <img style={{ position: "absolute", top: 0, left: 0 }} height={isMobile ? 350 : 700} src={mapSelectedURL} alt="map" />}
               </div>
 
               <IndicatorContainer style={{ opacity: selectedName !== "mosul" ? .5 : 1 }} onClick={() => handleSelectName("mosul")}>
-                <MosulIndicator height={70} width={40} src={Vector} alt="map" />
-                <MosulText style={{ fontWeight: selectedName === "mosul" ? 700 : 400 }}>Mosul</MosulText>
+                <MosulIndicator style={isMobile ? {
+                  top: "68px",
+                  left: "187px"
+                } : {}} height={isMobile ? 35 : 70} width={isMobile ? 20 : 40} src={Vector} alt="map" />
+                <MosulText style={isMobile ? { fontSize: "8px", top: "99px", left: "184px", fontWeight: selectedName === "mosul" ? 700 : 400 } : { fontWeight: selectedName === "mosul" ? 700 : 400 }}>Mosul</MosulText>
               </IndicatorContainer>
               <IndicatorContainer style={{ opacity: selectedName !== "raqqa" ? .5 : 1 }} onClick={() => handleSelectName("raqqa")}>
-                <RaqqaIndicator height={70} width={40} src={Vector} alt="map" />
-                <RaqqaText style={{ fontWeight: selectedName === "raqqa" ? 700 : 400 }}>Raqqa</RaqqaText>
+                <RaqqaIndicator style={isMobile ? {
+                  top: "58px",
+                  left: "148px",
+                } : {}} height={isMobile ? 35 : 70} width={isMobile ? 20 : 40} src={Vector} alt="map" />
+                <RaqqaText style={isMobile ? { fontSize: "8px", top: "89px", left: "146px", fontWeight: selectedName === "mosul" ? 700 : 400 } : { fontWeight: selectedName === "mosul" ? 700 : 400 }} >Raqqa</RaqqaText>
               </IndicatorContainer>
-              <Credits style={{ position: "absolute", top: "585px" }}>This data is available on <span>
-                <a
-                  style={{ color: "#156082" }}
-                  href="http://www.google.com/"
-                  target="_blank"
-                  rel="noreferrer"
-                >Dataverse</a></span>.</Credits>
-              <Credits style={{ position: "absolute", top: "625px" }}>Data visualization by Feeling Data and Hampshire Analytics.</Credits>
-              <Credits style={{ position: "absolute", top: "665px" }}>We thank the Yale Law School Oscar M. Ruebhausen Fund</Credits>
-              <Credits style={{ position: "absolute", top: "680px" }}> for its support for this project.</Credits>
+              {!isMobile && <>
+                <Credits style={{ position: "absolute", top: "585px" }}>This data is available on <span>
+                  <a
+                    style={{ color: "#156082" }}
+                    href="http://www.google.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >Dataverse</a></span>.</Credits>
+                <Credits style={{ position: "absolute", top: "625px" }}>Data visualization by Feeling Data and Hampshire Analytics.</Credits>
+                <Credits style={{ position: "absolute", top: "665px" }}>We thank the Yale Law School Oscar M. Ruebhausen Fund</Credits>
+                <Credits style={{ position: "absolute", top: "680px" }}> for its support for this project.</Credits>
+              </>}
 
             </div>
 
 
           </MapContainer>
           <RightPanel>
-            <LineChart setHoverCategories={setHoverCategories} hoverCategories={hoverCategories} hoveredQuarter={hoveredQuarter} setHoveredQuarter={setHoveredQuarter} data={selectedData} name={selectedName === "mosul" ? "Mosul, Iraq" : selectedName === "raqqa" ? "Raqqa, Syria" : "All"} />
-            <CategoryBubbleChart hoverCategories={hoverCategories} setHoveredQuarter={setHoveredQuarter} hoveredQuarter={hoveredQuarter} data={selectedData} sizeScale={sizeScale} />
+            <LineChart isMobile={isMobile} setHoverCategories={setHoverCategories} hoverCategories={hoverCategories} hoveredQuarter={hoveredQuarter} setHoveredQuarter={setHoveredQuarter} data={selectedData} name={selectedName === "mosul" ? "Mosul, Iraq" : selectedName === "raqqa" ? "Raqqa, Syria" : "All"} />
+            <CategoryBubbleChart isMobile={isMobile} hoverCategories={hoverCategories} setHoveredQuarter={setHoveredQuarter} hoveredQuarter={hoveredQuarter} data={selectedData} sizeScale={sizeScale} />
           </RightPanel>
         </ContentContainer>
       </AppContainer>
-    </ScrollWrapper>
+    </ScrollWrapper >
 
   );
 }

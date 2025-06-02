@@ -45,7 +45,6 @@ export default function CircleLegend({ data, sizeScale }) {
 
     circles.forEach((val, i) => {
       const r = sizeScale(val) / 2;
-      console.log(r);
       const cy = lastY - r;
 
       svg

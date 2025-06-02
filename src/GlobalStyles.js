@@ -15,4 +15,9 @@ export const GlobalStyle = createGlobalStyle`
     background: white;
     color: #333;
   }
+
+  .y-axis path.domain,
+  .x-axis path.domain {
+    stroke: transparent;
+  }
 `;

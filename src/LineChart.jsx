@@ -19,7 +19,7 @@ margin: 10px;
 `;
 
 const ChartContainer = styled.div`
-  width: 570px;
+  width: ${(props) => props.$width}px;
   color: #333;
   font-family: 'Bennett Text', Georgia, serif;
 `;
@@ -58,11 +58,22 @@ const ClearItem = styled.div`
 `;
 
 export default function LineChart(props) {
-  const { data, name, setHoveredQuarter, hoveredQuarter, setHoverCategories, hoverCategories, } = props;
+  const { data, name, setHoveredQuarter, hoveredQuarter, setHoverCategories, hoverCategories, isMobile } = props;
   const svgRef = useRef();
   const margin = { top: 5, right: 8, bottom: 60, left: 40 };
-  const width = 570 - margin.left - margin.right;
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [chartWidth, setChartWidth] = useState((isMobile ? 400 : 570) - margin.left - margin.right);
   const height = 500 - margin.top - margin.bottom;
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useEffect(() => {
+    setChartWidth((isMobile ? 400 : 570) - margin.left - margin.right);
+  }, [isMobile, windowWidth]);
 
   const colorMap = {
     "Military Personnel, Equipment & Facilities": "#DFC5B2",
@@ -96,7 +107,7 @@ export default function LineChart(props) {
     });
 
   const quarters = data.map((d) => d.quarter);
-  const xScale = scalePoint().domain(quarters).range([0, width]);
+  const xScale = scalePoint().domain(quarters).range([0, chartWidth]);
   const visibleCategories = hoverCategories.length > 0 ? hoverCategories : allCategories;
   const yMax = max(data, (d) =>
     max(d.categories.filter(c => visibleCategories.includes(c.name)), c => c.count)
@@ -110,7 +121,7 @@ export default function LineChart(props) {
     let g = svg.select('g.main');
     if (g.empty()) {
       g = svg
-        .attr('width', width + margin.left + margin.right)
+        .attr('width', chartWidth + margin.left + margin.right)
         .attr('height', height + margin.top + margin.bottom)
         .append('g')
         .attr('class', 'main')
@@ -132,6 +143,10 @@ export default function LineChart(props) {
         })
         .attr('visibility', 'visible');
     }
+    // Always update SVG width/height in case chart resizes
+    svg
+      .attr('width', chartWidth + margin.left + margin.right)
+      .attr('height', height + margin.top + margin.bottom);
 
     const t = transition().duration(1000).ease(easeCubicInOut);
 
@@ -142,20 +157,24 @@ export default function LineChart(props) {
     let defs = svg.select('defs');
     if (defs.empty()) defs = svg.append('defs');
 
-    g.select('.y-axis')
-      .call(g => g.select('.domain').attr('stroke', 'transparent'))
-      .transition(t)
-      .call(g => g.select('.domain').attr('stroke', 'transparent'))
-      .call(axisLeft(yScale).ticks(5).tickSize(-width).tickPadding(8))
+    // Update Y axis: only transition if already rendered
+    const yAxisGroup = g.select('.y-axis');
+    if (!yAxisGroup.selectAll('.tick').empty()) {
+      yAxisGroup.transition(t)
+        .call(axisLeft(yScale).ticks(5).tickSize(-chartWidth).tickPadding(8));
+    } else {
+      yAxisGroup
+        .call(axisLeft(yScale).ticks(5).tickSize(-chartWidth).tickPadding(8));
+    }
 
+    yAxisGroup
       .call(g => g.selectAll('line').attr('stroke', '#D9D9D9').attr('stroke-width', 0.5))
-      .call(g => g.selectAll('text').attr('x', -12).attr("color", "#595959").attr("font-size", 12)).attr("font-family", "Bennett Text");
+      .call(g => g.selectAll('text').attr('x', -12).attr("color", "#595959").attr("font-size", 12))
+      .attr("font-family", "Bennett Text");
 
     g.select('.x-axis')
-      .call(g => g.select('.domain').attr('stroke', 'transparent'))
       .transition(t)
       .call(axisBottom(xScale))
-      .call(g => g.select('.domain').attr('stroke', 'transparent'))
       .call(g => g.selectAll('line').attr('stroke', '#BCBCBC').attr('stroke-opacity', 0.35))
       .call(g => g.selectAll('text').attr('color', 'transparent'));
 
@@ -241,7 +260,7 @@ export default function LineChart(props) {
 
     overlayGroup.selectAll('*').remove();
 
-    const step = xScale.step ? xScale.step() : width / quarters.length;
+    const step = xScale.step ? xScale.step() : chartWidth / quarters.length;
 
     quarters.forEach((q) => {
       const x = xScale(q);
@@ -381,7 +400,7 @@ export default function LineChart(props) {
         .transition(t)
         .style('opacity', visible ? 1 : 0);
     });
-  }, [data, hoveredQuarter, hoverCategories]);
+  }, [data, hoveredQuarter, hoverCategories, isMobile, chartWidth]);
 
   const handleLegendItemClick = (value) => {
     const tempArr = [...hoverCategories];
@@ -395,7 +414,7 @@ export default function LineChart(props) {
   };
 
   return (
-    <ChartContainer>
+    <ChartContainer $width={isMobile ? 400 : 570}>
       <Title>Targets, By Total Number in Press Releases per Quarter in <span style={{ color: "#156082", fontWeight: 600 }}>{name}</span> </Title>
       <Legend>
 

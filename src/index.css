@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'Bennett Text';
+  src: url('./BennettTextFour.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Bennett Text', Georgia, serif;
+  margin: 0;
+  padding: 0;
+  background: white;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

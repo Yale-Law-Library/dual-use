@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/dual-use/static/css/main.86bcb413.css",
+    "main.js": "/dual-use/static/js/main.62e66402.js",
+    "static/js/206.988e2cfb.chunk.js": "/dual-use/static/js/206.988e2cfb.chunk.js",
+    "static/media/BennettTextFour.otf": "/dual-use/static/media/BennettTextFour.cef41b7bf52fedcce7c6.otf",
+    "static/media/map_group.svg": "/dual-use/static/media/map_group.91091694a7e689f8d3e2a3cee902b866.svg",
+    "static/media/background.svg": "/dual-use/static/media/background.1bc2a128ace5a856138b2855a2f0047b.svg",
+    "static/media/Map_selected_outline.svg": "/dual-use/static/media/Map_selected_outline.748e4304bb8b1480e32ac68d81db12f5.svg",
+    "static/media/Vector.svg": "/dual-use/static/media/Vector.c47317aeb4da5d266337dab51d8ac2b4.svg",
+    "index.html": "/dual-use/index.html"
+  },
+  "entrypoints": [
+    "static/css/main.86bcb413.css",
+    "static/js/main.62e66402.js"
+  ]
+}

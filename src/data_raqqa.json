@@ -1,0 +1,835 @@
+[
+  {
+    "quarter": "Q4 '14",
+    "categories": [
+      {
+        "name": "Financial and Banking Facilities",
+        "count": 0
+      },
+      {
+        "name": "Manufacturing, Production & Construction",
+        "count": 1
+      },
+      {
+        "name": "Electrical Infrastructure",
+        "count": 0
+      },
+      {
+        "name": "Media and Telecom Facilities",
+        "count": 0
+      },
+      {
+        "name": "Oil Infrastructure",
+        "count": 1
+      },
+      {
+        "name": "Military Personnel, Equipment & Facilities",
+        "count": 16
+      },
+      {
+        "name": "Residential Buildings",
+        "count": 3
+      },
+      {
+        "name": "Terrain",
+        "count": 0
+      },
+      {
+        "name": "Transportation Infrastructure",
+        "count": 1
+      },
+      {
+        "name": "Vehicles",
+        "count": 2
+      },
+      {
+        "name": "Water Infrastructure",
+        "count": 0
+      }
+    ]
+  },
+  {
+    "quarter": "Q1 '15",
+    "categories": [
+      {
+        "name": "Financial and Banking Facilities",
+        "count": 0
+      },
+      {
+        "name": "Manufacturing, Production & Construction",
+        "count": 0
+      },
+      {
+        "name": "Electrical Infrastructure",
+        "count": 0
+      },
+      {
+        "name": "Media and Telecom Facilities",
+        "count": 0
+      },
+      {
+        "name": "Oil Infrastructure",
+        "count": 1
+      },
+      {
+        "name": "Military Personnel, Equipment & Facilities",
+        "count": 12
+      },
+      {
+        "name": "Residential Buildings",
+        "count": 2
+      },
+      {
+        "name": "Terrain",
+        "count": 0
+      },
+      {
+        "name": "Transportation Infrastructure",
+        "count": 0
+      },
+      {
+        "name": "Vehicles",
+        "count": 3
+      },
+      {
+        "name": "Water Infrastructure",
+        "count": 0
+      }
+    ]
+  },
+  {
+    "quarter": "Q2 '15",
+    "categories": [
+      {
+        "name": "Financial and Banking Facilities",
+        "count": 0
+      },
+      {
+        "name": "Manufacturing, Production & Construction",
+        "count": 8
+      },
+      {
+        "name": "Electrical Infrastructure",
+        "count": 0
+      },
+      {
+        "name": "Media and Telecom Facilities",
+        "count": 0
+      },
+      {
+        "name": "Oil Infrastructure",
+        "count": 0
+      },
+      {
+        "name": "Military Personnel, Equipment & Facilities",
+        "count": 19
+      },
+      {
+        "name": "Residential Buildings",
+        "count": 1
+      },
+      {
+        "name": "Terrain",
+        "count": 1
+      },
+      {
+        "name": "Transportation Infrastructure",
+        "count": 3
+      },
+      {
+        "name": "Vehicles",
+        "count": 10
+      },
+      {
+        "name": "Water Infrastructure",
+        "count": 0
+      }
+    ]
+  },
+  {
+    "quarter": "Q3 '15",
+    "categories": [
+      {
+        "name": "Financial and Banking Facilities",
+        "count": 0
+      },
+      {
+        "name": "Manufacturing, Production & Construction",
+        "count": 9
+      },
+      {
+        "name": "Electrical Infrastructure",
+        "count": 0
+      },
+      {
+        "name": "Media and Telecom Facilities",
+        "count": 0
+      },
+      {
+        "name": "Oil Infrastructure",
+        "count": 0
+      },
+      {
+        "name": "Military Personnel, Equipment & Facilities",
+        "count": 31
+      },
+      {
+        "name": "Residential Buildings",
+        "count": 2
+      },
+      {
+        "name": "Terrain",
+        "count": 0
+      },
+      {
+        "name": "Transportation Infrastructure",
+        "count": 2
+      },
+      {
+        "name": "Vehicles",
+        "count": 9
+      },
+      {
+        "name": "Water Infrastructure",
+        "count": 0
+      }
+    ]
+  },
+  {
+    "quarter": "Q4 '15",
+    "categories": [
+      {
+        "name": "Financial and Banking Facilities",
+        "count": 1
+      },
+      {
+        "name": "Manufacturing, Production & Construction",
+        "count": 3
+      },
+      {
+        "name": "Electrical Infrastructure",
+        "count": 0
+      },
+      {
+        "name": "Media and Telecom Facilities",
+        "count": 0
+      },
+      {
+        "name": "Oil Infrastructure",
+        "count": 1
+      },
+      {
+        "name": "Military Personnel, Equipment & Facilities",
+        "count": 25
+      },
+      {
+        "name": "Residential Buildings",
+        "count": 4
+      },
+      {
+        "name": "Terrain",
+        "count": 0
+      },
+      {
+        "name": "Transportation Infrastructure",
+        "count": 0
+      },
+      {
+        "name": "Vehicles",
+        "count": 9
+      },
+      {
+        "name": "Water Infrastructure",
+        "count": 0
+      }
+    ]
+  },
+  {
+    "quarter": "Q1 '16",
+    "categories": [
+      {
+        "name": "Financial and Banking Facilities",
+        "count": 0
+      },
+      {
+        "name": "Manufacturing, Production & Construction",
+        "count": 7
+      },
+      {
+        "name": "Electrical Infrastructure",
+        "count": 0
+      },
+      {
+        "name": "Media and Telecom Facilities",
+        "count": 0
+      },
+      {
+        "name": "Oil Infrastructure",
+        "count": 5
+      },
+      {
+        "name": "Military Personnel, Equipment & Facilities",
+        "count": 19
+      },
+      {
+        "name": "Residential Buildings",
+        "count": 0
+      },
+      {
+        "name": "Terrain",
+        "count": 0
+      },
+      {
+        "name": "Transportation Infrastructure",
+        "count": 1
+      },
+      {
+        "name": "Vehicles",
+        "count": 7
+      },
+      {
+        "name": "Water Infrastructure",
+        "count": 0
+      }
+    ]
+  },
+  {
+    "quarter": "Q2 '16",
+    "categories": [
+      {
+        "name": "Financial and Banking Facilities",
+        "count": 1
+      },
+      {
+        "name": "Manufacturing, Production & Construction",
+        "count": 7
+      },
+      {
+        "name": "Electrical Infrastructure",
+        "count": 0
+      },
+      {
+        "name": "Media and Telecom Facilities",
+        "count": 0
+      },
+      {
+        "name": "Oil Infrastructure",
+        "count": 18
+      },
+      {
+        "name": "Military Personnel, Equipment & Facilities",
+        "count": 21
+      },
+      {
+        "name": "Residential Buildings",
+        "count": 0
+      },
+      {
+        "name": "Terrain",
+        "count": 0
+      },
+      {
+        "name": "Transportation Infrastructure",
+        "count": 5
+      },
+      {
+        "name": "Vehicles",
+        "count": 9
+      },
+      {
+        "name": "Water Infrastructure",
+        "count": 0
+      }
+    ]
+  },
+  {
+    "quarter": "Q3 '16",
+    "categories": [
+      {
+        "name": "Financial and Banking Facilities",
+        "count": 0
+      },
+      {
+        "name": "Manufacturing, Production & Construction",
+        "count": 5
+      },
+      {
+        "name": "Electrical Infrastructure",
+        "count": 0
+      },
+      {
+        "name": "Media and Telecom Facilities",
+        "count": 0
+      },
+      {
+        "name": "Oil Infrastructure",
+        "count": 25
+      },
+      {
+        "name": "Military Personnel, Equipment & Facilities",
+        "count": 23
+      },
+      {
+        "name": "Residential Buildings",
+        "count": 1
+      },
+      {
+        "name": "Terrain",
+        "count": 0
+      },
+      {
+        "name": "Transportation Infrastructure",
+        "count": 7
+      },
+      {
+        "name": "Vehicles",
+        "count": 3
+      },
+      {
+        "name": "Water Infrastructure",
+        "count": 0
+      }
+    ]
+  },
+  {
+    "quarter": "Q4 '16",
+    "categories": [
+      {
+        "name": "Financial and Banking Facilities",
+        "count": 1
+      },
+      {
+        "name": "Manufacturing, Production & Construction",
+        "count": 10
+      },
+      {
+        "name": "Electrical Infrastructure",
+        "count": 0
+      },
+      {
+        "name": "Media and Telecom Facilities",
+        "count": 1
+      },
+      {
+        "name": "Oil Infrastructure",
+        "count": 25
+      },
+      {
+        "name": "Military Personnel, Equipment & Facilities",
+        "count": 38
+      },
+      {
+        "name": "Residential Buildings",
+        "count": 3
+      },
+      {
+        "name": "Terrain",
+        "count": 0
+      },
+      {
+        "name": "Transportation Infrastructure",
+        "count": 20
+      },
+      {
+        "name": "Vehicles",
+        "count": 18
+      },
+      {
+        "name": "Water Infrastructure",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "quarter": "Q1 '17",
+    "categories": [
+      {
+        "name": "Financial and Banking Facilities",
+        "count": 0
+      },
+      {
+        "name": "Manufacturing, Production & Construction",
+        "count": 11
+      },
+      {
+        "name": "Electrical Infrastructure",
+        "count": 0
+      },
+      {
+        "name": "Media and Telecom Facilities",
+        "count": 3
+      },
+      {
+        "name": "Oil Infrastructure",
+        "count": 39
+      },
+      {
+        "name": "Military Personnel, Equipment & Facilities",
+        "count": 88
+      },
+      {
+        "name": "Residential Buildings",
+        "count": 17
+      },
+      {
+        "name": "Terrain",
+        "count": 0
+      },
+      {
+        "name": "Transportation Infrastructure",
+        "count": 48
+      },
+      {
+        "name": "Vehicles",
+        "count": 33
+      },
+      {
+        "name": "Water Infrastructure",
+        "count": 0
+      }
+    ]
+  },
+  {
+    "quarter": "Q2 '17",
+    "categories": [
+      {
+        "name": "Financial and Banking Facilities",
+        "count": 1
+      },
+      {
+        "name": "Manufacturing, Production & Construction",
+        "count": 26
+      },
+      {
+        "name": "Electrical Infrastructure",
+        "count": 0
+      },
+      {
+        "name": "Media and Telecom Facilities",
+        "count": 1
+      },
+      {
+        "name": "Oil Infrastructure",
+        "count": 5
+      },
+      {
+        "name": "Military Personnel, Equipment & Facilities",
+        "count": 146
+      },
+      {
+        "name": "Residential Buildings",
+        "count": 11
+      },
+      {
+        "name": "Terrain",
+        "count": 0
+      },
+      {
+        "name": "Transportation Infrastructure",
+        "count": 19
+      },
+      {
+        "name": "Vehicles",
+        "count": 67
+      },
+      {
+        "name": "Water Infrastructure",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "quarter": "Q3 '17",
+    "categories": [
+      {
+        "name": "Financial and Banking Facilities",
+        "count": 0
+      },
+      {
+        "name": "Manufacturing, Production & Construction",
+        "count": 18
+      },
+      {
+        "name": "Electrical Infrastructure",
+        "count": 1
+      },
+      {
+        "name": "Media and Telecom Facilities",
+        "count": 28
+      },
+      {
+        "name": "Oil Infrastructure",
+        "count": 4
+      },
+      {
+        "name": "Military Personnel, Equipment & Facilities",
+        "count": 231
+      },
+      {
+        "name": "Residential Buildings",
+        "count": 4
+      },
+      {
+        "name": "Terrain",
+        "count": 0
+      },
+      {
+        "name": "Transportation Infrastructure",
+        "count": 19
+      },
+      {
+        "name": "Vehicles",
+        "count": 72
+      },
+      {
+        "name": "Water Infrastructure",
+        "count": 0
+      }
+    ]
+  },
+  {
+    "quarter": "Q4 '17",
+    "categories": [
+      {
+        "name": "Financial and Banking Facilities",
+        "count": 0
+      },
+      {
+        "name": "Manufacturing, Production & Construction",
+        "count": 0
+      },
+      {
+        "name": "Electrical Infrastructure",
+        "count": 0
+      },
+      {
+        "name": "Media and Telecom Facilities",
+        "count": 11
+      },
+      {
+        "name": "Oil Infrastructure",
+        "count": 1
+      },
+      {
+        "name": "Military Personnel, Equipment & Facilities",
+        "count": 30
+      },
+      {
+        "name": "Residential Buildings",
+        "count": 0
+      },
+      {
+        "name": "Terrain",
+        "count": 0
+      },
+      {
+        "name": "Transportation Infrastructure",
+        "count": 10
+      },
+      {
+        "name": "Vehicles",
+        "count": 9
+      },
+      {
+        "name": "Water Infrastructure",
+        "count": 0
+      }
+    ]
+  },
+  {
+    "quarter": "Q1 '18",
+    "categories": [
+      {
+        "name": "Financial and Banking Facilities",
+        "count": 0
+      },
+      {
+        "name": "Manufacturing, Production & Construction",
+        "count": 0
+      },
+      {
+        "name": "Electrical Infrastructure",
+        "count": 0
+      },
+      {
+        "name": "Media and Telecom Facilities",
+        "count": 0
+      },
+      {
+        "name": "Oil Infrastructure",
+        "count": 0
+      },
+      {
+        "name": "Military Personnel, Equipment & Facilities",
+        "count": 1
+      },
+      {
+        "name": "Residential Buildings",
+        "count": 0
+      },
+      {
+        "name": "Terrain",
+        "count": 0
+      },
+      {
+        "name": "Transportation Infrastructure",
+        "count": 0
+      },
+      {
+        "name": "Vehicles",
+        "count": 0
+      },
+      {
+        "name": "Water Infrastructure",
+        "count": 0
+      }
+    ]
+  },
+  {
+    "quarter": "Q2 '18",
+    "categories": [
+      {
+        "name": "Financial and Banking Facilities",
+        "count": 0
+      },
+      {
+        "name": "Manufacturing, Production & Construction",
+        "count": 0
+      },
+      {
+        "name": "Electrical Infrastructure",
+        "count": 0
+      },
+      {
+        "name": "Media and Telecom Facilities",
+        "count": 0
+      },
+      {
+        "name": "Oil Infrastructure",
+        "count": 0
+      },
+      {
+        "name": "Military Personnel, Equipment & Facilities",
+        "count": 0
+      },
+      {
+        "name": "Residential Buildings",
+        "count": 0
+      },
+      {
+        "name": "Terrain",
+        "count": 0
+      },
+      {
+        "name": "Transportation Infrastructure",
+        "count": 0
+      },
+      {
+        "name": "Vehicles",
+        "count": 0
+      },
+      {
+        "name": "Water Infrastructure",
+        "count": 0
+      }
+    ]
+  },
+  {
+    "quarter": "Q3 '18",
+    "categories": [
+      {
+        "name": "Financial and Banking Facilities",
+        "count": 0
+      },
+      {
+        "name": "Manufacturing, Production & Construction",
+        "count": 0
+      },
+      {
+        "name": "Electrical Infrastructure",
+        "count": 0
+      },
+      {
+        "name": "Media and Telecom Facilities",
+        "count": 0
+      },
+      {
+        "name": "Oil Infrastructure",
+        "count": 0
+      },
+      {
+        "name": "Military Personnel, Equipment & Facilities",
+        "count": 0
+      },
+      {
+        "name": "Residential Buildings",
+        "count": 0
+      },
+      {
+        "name": "Terrain",
+        "count": 0
+      },
+      {
+        "name": "Transportation Infrastructure",
+        "count": 0
+      },
+      {
+        "name": "Vehicles",
+        "count": 0
+      },
+      {
+        "name": "Water Infrastructure",
+        "count": 0
+      }
+    ]
+  },
+  {
+    "quarter": "Q4 '18",
+    "categories": [
+      {
+        "name": "Financial and Banking Facilities",
+        "count": 0
+      },
+      {
+        "name": "Manufacturing, Production & Construction",
+        "count": 0
+      },
+      {
+        "name": "Electrical Infrastructure",
+        "count": 0
+      },
+      {
+        "name": "Media and Telecom Facilities",
+        "count": 0
+      },
+      {
+        "name": "Oil Infrastructure",
+        "count": 0
+      },
+      {
+        "name": "Military Personnel, Equipment & Facilities",
+        "count": 0
+      },
+      {
+        "name": "Residential Buildings",
+        "count": 0
+      },
+      {
+        "name": "Terrain",
+        "count": 0
+      },
+      {
+        "name": "Transportation Infrastructure",
+        "count": 0
+      },
+      {
+        "name": "Vehicles",
+        "count": 0
+      },
+      {
+        "name": "Water Infrastructure",
+        "count": 0
+      }
+    ]
+  }
+]

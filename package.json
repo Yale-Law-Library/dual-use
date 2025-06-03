@@ -34,7 +34,7 @@
       "react-app/jest"
     ]
   },
-  "homepage": "https://yale-law-library.github.io/dual-use/",
+  "homepage": "https://dual-use-yls.github.io",
   "browserslist": {
     "production": [
       ">0.2%",

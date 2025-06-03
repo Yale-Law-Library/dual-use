@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/dual-use/static/css/main.f2cba258.css",
-    "main.js": "/dual-use/static/js/main.213257df.js",
-    "static/media/BennettTextFour.otf": "/dual-use/static/media/BennettTextFour.cef41b7bf52fedcce7c6.otf",
-    "static/media/map_group.svg": "/dual-use/static/media/map_group.91091694a7e689f8d3e2a3cee902b866.svg",
-    "static/media/background.svg": "/dual-use/static/media/background.1bc2a128ace5a856138b2855a2f0047b.svg",
-    "static/media/Map_selected_outline.svg": "/dual-use/static/media/Map_selected_outline.748e4304bb8b1480e32ac68d81db12f5.svg",
-    "static/media/Vector.svg": "/dual-use/static/media/Vector.c47317aeb4da5d266337dab51d8ac2b4.svg",
-    "index.html": "/dual-use/index.html"
+    "main.css": "/static/css/main.3d069f2c.css",
+    "main.js": "/static/js/main.183704b0.js",
+    "static/media/BennettTextFour.otf": "/static/media/BennettTextFour.cef41b7bf52fedcce7c6.otf",
+    "static/media/map_group.svg": "/static/media/map_group.91091694a7e689f8d3e2a3cee902b866.svg",
+    "static/media/background.svg": "/static/media/background.1bc2a128ace5a856138b2855a2f0047b.svg",
+    "static/media/Map_selected_outline.svg": "/static/media/Map_selected_outline.748e4304bb8b1480e32ac68d81db12f5.svg",
+    "static/media/Vector.svg": "/static/media/Vector.c47317aeb4da5d266337dab51d8ac2b4.svg",
+    "index.html": "/index.html"
   },
   "entrypoints": [
-    "static/css/main.f2cba258.css",
-    "static/js/main.213257df.js"
+    "static/css/main.3d069f2c.css",
+    "static/js/main.183704b0.js"
   ]
 }

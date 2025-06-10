@@ -242,7 +242,7 @@ function App() {
 
 
         <ContentContainer style={{ flexDirection: isColumn ? 'column' : 'row' }}>
-          <MapContainer style={{ display: "flex", justifyContent: "center" }}>
+          <MapContainer style={isMobile ? { display: "flex", justifyContent: "center" } : {}}>
             <div style={{ position: "sticky", top: 0 }}>
               <div style={{ position: "relative" }}>
                 <div>

@@ -62,7 +62,7 @@ export default function LineChart(props) {
   const svgRef = useRef();
   const margin = { top: 5, right: 8, bottom: 60, left: 40 };
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [chartWidth, setChartWidth] = useState((isMobile ? 400 : 570) - margin.left - margin.right);
+  const [chartWidth, setChartWidth] = useState((isMobile ? 340 : 570) - margin.left - margin.right);
   const height = 500 - margin.top - margin.bottom;
 
   useEffect(() => {
@@ -72,7 +72,7 @@ export default function LineChart(props) {
   }, []);
 
   useEffect(() => {
-    setChartWidth((isMobile ? 400 : 570) - margin.left - margin.right);
+    setChartWidth((isMobile ? 340 : 570) - margin.left - margin.right);
   }, [isMobile, windowWidth]);
 
   const colorMap = {
@@ -169,7 +169,7 @@ export default function LineChart(props) {
 
     yAxisGroup
       .call(g => g.selectAll('line').attr('stroke', '#D9D9D9').attr('stroke-width', 0.5))
-      .call(g => g.selectAll('text').attr('x', -12).attr("color", "#595959").attr("font-size", 12))
+      .call(g => g.selectAll('text').attr("color", "#595959").attr("font-size", 12))
       .attr("font-family", "Bennett Text");
 
     g.select('.x-axis')
@@ -414,7 +414,7 @@ export default function LineChart(props) {
   };
 
   return (
-    <ChartContainer $width={isMobile ? 400 : 570}>
+    <ChartContainer $width={isMobile ? 340 : 570}>
       <Title>Targets, By Total Number in Press Releases per Quarter in <span style={{ color: "#156082", fontWeight: 600 }}>{name}</span> </Title>
       <Legend>
 

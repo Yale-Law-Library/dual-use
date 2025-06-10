@@ -19,6 +19,7 @@ const RightPanel = styled.div`
   width: 100%;
   padding: 10px;
   box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.25) inset;
+  align-items: center;
 `;
 
 const IndicatorContainer = styled.div`
@@ -199,7 +200,7 @@ function App() {
     }
   };
   return (
-    <ScrollWrapper style={{ overflowX: 'hidden' }}>
+    <ScrollWrapper style={isMobile ? { overflowX: 'hidden' } : {}}>
       <AppContainer className="App" ref={componentRef}>
 
         <AppHeader style={{ isMobile }}>
@@ -242,10 +243,13 @@ function App() {
 
         <ContentContainer style={{ flexDirection: isColumn ? 'column' : 'row' }}>
           <MapContainer>
-            <div style={{ position: "sticky", top: 0 }}>
+            <div style={isMobile ? { position: "sticky", top: 0, display: "flex", justifyContent: "center" } : { position: "sticky", top: 0 }}>
               <div style={{ position: "relative" }}>
-                <img height={isMobile ? 350 : 700} src={mapUrl} alt="map" />
-                {selectedName === "all" && <img style={{ position: "absolute", top: 0, left: 0 }} height={isMobile ? 350 : 700} src={mapSelectedURL} alt="map" />}
+                <div>
+                  <img height={isMobile ? 350 : 700} src={mapUrl} alt="map" />
+                  {selectedName === "all" && <img style={{ position: "absolute", top: 0, left: 0 }} height={isMobile ? 350 : 700} src={mapSelectedURL} alt="map" />}
+                </div>
+
               </div>
 
               <IndicatorContainer style={{ opacity: selectedName !== "mosul" ? .5 : 1 }} onClick={() => handleSelectName("mosul")}>
@@ -279,7 +283,7 @@ function App() {
 
 
           </MapContainer>
-          <RightPanel>
+          <RightPanel style={{ padding: isMobile ? "10px 2px" : "10px" }}>
             <LineChart isMobile={isMobile} setHoverCategories={setHoverCategories} hoverCategories={hoverCategories} hoveredQuarter={hoveredQuarter} setHoveredQuarter={setHoveredQuarter} data={selectedData} name={selectedName === "mosul" ? "Mosul, Iraq" : selectedName === "raqqa" ? "Raqqa, Syria" : "All"} />
             <CategoryBubbleChart isMobile={isMobile} hoverCategories={hoverCategories} setHoveredQuarter={setHoveredQuarter} hoveredQuarter={hoveredQuarter} data={selectedData} sizeScale={sizeScale} />
           </RightPanel>

@@ -138,7 +138,7 @@ export default function CategoryBubbleChart(props) {
   });
 
   return (
-    <GridWrapper style={{ width: isMobile ? "370px" : "550px" }}>
+    <GridWrapper style={{ width: isMobile ? "328px" : "550px" }}>
       {categories.filter((c) => hoverCategories.length === 0 || hoverCategories.includes(c)).map((category, i) => {
         const maxCategorySize = Math.max(
           ...data.map(d => {

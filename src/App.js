@@ -242,8 +242,8 @@ function App() {
 
 
         <ContentContainer style={{ flexDirection: isColumn ? 'column' : 'row' }}>
-          <MapContainer>
-            <div style={isMobile ? { position: "sticky", top: 0, display: "flex", justifyContent: "center" } : { position: "sticky", top: 0 }}>
+          <MapContainer style={{ display: "flex", justifyContent: "center" }}>
+            <div style={{ position: "sticky", top: 0 }}>
               <div style={{ position: "relative" }}>
                 <div>
                   <img height={isMobile ? 350 : 700} src={mapUrl} alt="map" />
@@ -286,7 +286,20 @@ function App() {
           <RightPanel style={{ padding: isMobile ? "10px 2px" : "10px" }}>
             <LineChart isMobile={isMobile} setHoverCategories={setHoverCategories} hoverCategories={hoverCategories} hoveredQuarter={hoveredQuarter} setHoveredQuarter={setHoveredQuarter} data={selectedData} name={selectedName === "mosul" ? "Mosul, Iraq" : selectedName === "raqqa" ? "Raqqa, Syria" : "All"} />
             <CategoryBubbleChart isMobile={isMobile} hoverCategories={hoverCategories} setHoveredQuarter={setHoveredQuarter} hoveredQuarter={hoveredQuarter} data={selectedData} sizeScale={sizeScale} />
+            {isMobile && <>
+              <Credits>This data is available on <span>
+                <a
+                  style={{ color: "#156082" }}
+                  href="http://www.google.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                >Dataverse</a></span>.</Credits>
+              <Credits >Data visualization by Feeling Data and Hampshire Analytics.</Credits>
+              <Credits >We thank the Yale Law School Oscar M. Ruebhausen Fund</Credits>
+              <Credits > for its support for this project.</Credits>
+            </>}
           </RightPanel>
+
         </ContentContainer>
       </AppContainer>
     </ScrollWrapper >

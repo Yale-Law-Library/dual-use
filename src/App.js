@@ -299,7 +299,7 @@ function App() {
 
           </MapContainer>
           <RightPanel style={{ padding: isMobile ? "10px 2px" : "0 10px 10px 10px" }}>
-            <Title>
+            <Title style={isMobile ? { boxShadow: "none", width: "570px" } : {}}>
               Targets, By Total Number in Press Releases per Quarter in{" "}
               <div style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', cursor: 'pointer', borderBottom: '2px solid #156082' }}>
                 <select

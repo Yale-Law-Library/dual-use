@@ -285,7 +285,7 @@ function App() {
                 <Credits style={{ position: "absolute", top: "585px" }}>The underlying data are available on <span>
                   <a
                     style={{ color: "#156082" }}
-                    href="http://www.google.com/"
+                    href="https://dataverse.yale.edu/dataset.xhtml?persistentId=doi:10.60600/YU/ULUOIR"
                     target="_blank"
                     rel="noreferrer"
                   >Dataverse</a></span>.</Credits>
@@ -335,7 +335,7 @@ function App() {
               <Credits>This data is available on <span>
                 <a
                   style={{ color: "#156082" }}
-                  href="http://www.google.com/"
+                  href="https://dataverse.yale.edu/dataset.xhtml?persistentId=doi:10.60600/YU/ULUOIR"
                   target="_blank"
                   rel="noreferrer"
                 >Dataverse</a></span>.</Credits>

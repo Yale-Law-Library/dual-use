@@ -98,7 +98,19 @@ font-weight: 400;
 line-height: normal;
 text-align: left;`
   ;
+const Title = styled.div`
+color: #000;
+text-align: center;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding: 10px;
+background: #ffffff;
+z-index:  2;
 
+box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.1);
+`;
 const AppContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -199,6 +211,9 @@ function App() {
       setSelectedName(name);
     }
   };
+
+  const allNames = [{ label: "Raqqa, Syria", value: "raqqa" }, { label: "Mosul, Iraq", value: "mosul" }, { label: "All", value: "all" }];
+
   return (
     <ScrollWrapper style={isMobile ? { overflowX: 'hidden' } : {}}>
       <AppContainer className="App" ref={componentRef}>
@@ -283,7 +298,37 @@ function App() {
 
 
           </MapContainer>
-          <RightPanel style={{ padding: isMobile ? "10px 2px" : "10px" }}>
+          <RightPanel style={{ padding: isMobile ? "10px 2px" : "0 10px 10px 10px" }}>
+            <Title>
+              Targets, By Total Number in Press Releases per Quarter in{" "}
+              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', cursor: 'pointer', borderBottom: '2px solid #156082' }}>
+                <select
+                  value={selectedName}
+                  onChange={(e) => setSelectedName(e.target.value)}
+                  style={{
+                    color: "#156082",
+                    fontWeight: 600,
+                    fontSize: "16px",
+                    border: "none",
+                    background: "transparent",
+                    appearance: "none",
+                    WebkitAppearance: "none",
+                    outline: "transparent",
+                    padding: 0,
+                    margin: "0 0 0 5px",
+
+                    cursor: "pointer"
+                  }}
+                >
+                  {allNames.map((n) => (
+                    <option key={n.value} value={n.value} style={{ color: "#000", backgroundColor: "#fff" }}>
+                      {n.label}
+                    </option>
+                  ))}
+                </select>
+                <span style={{ color: '#156082', fontSize: '12px' }}>▼</span>
+              </div>
+            </Title>
             <LineChart selectedName={selectedName} setSelectedName={setSelectedName} isMobile={isMobile} setHoverCategories={setHoverCategories} hoverCategories={hoverCategories} hoveredQuarter={hoveredQuarter} setHoveredQuarter={setHoveredQuarter} data={selectedData} name={selectedName === "mosul" ? "Mosul, Iraq" : selectedName === "raqqa" ? "Raqqa, Syria" : "All"} />
             <CategoryBubbleChart isMobile={isMobile} hoverCategories={hoverCategories} setHoveredQuarter={setHoveredQuarter} hoveredQuarter={hoveredQuarter} data={selectedData} sizeScale={sizeScale} />
             {isMobile && <>

@@ -108,7 +108,7 @@ line-height: normal;
 padding: 10px;
 background: #ffffff;
 z-index:  2;
-
+width: 100%;
 box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.1);
 `;
 const AppContainer = styled.div`

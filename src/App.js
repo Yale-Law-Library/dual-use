@@ -267,7 +267,7 @@ function App() {
                 <RaqqaText style={isMobile ? { fontSize: "8px", top: "89px", left: "146px", fontWeight: selectedName === "mosul" ? 700 : 400 } : { fontWeight: selectedName === "mosul" ? 700 : 400 }} >Raqqa</RaqqaText>
               </IndicatorContainer>
               {!isMobile && <>
-                <Credits style={{ position: "absolute", top: "585px" }}>This data is available on <span>
+                <Credits style={{ position: "absolute", top: "585px" }}>The underlying data are available on <span>
                   <a
                     style={{ color: "#156082" }}
                     href="http://www.google.com/"
@@ -284,7 +284,7 @@ function App() {
 
           </MapContainer>
           <RightPanel style={{ padding: isMobile ? "10px 2px" : "10px" }}>
-            <LineChart isMobile={isMobile} setHoverCategories={setHoverCategories} hoverCategories={hoverCategories} hoveredQuarter={hoveredQuarter} setHoveredQuarter={setHoveredQuarter} data={selectedData} name={selectedName === "mosul" ? "Mosul, Iraq" : selectedName === "raqqa" ? "Raqqa, Syria" : "All"} />
+            <LineChart selectedName={selectedName} setSelectedName={setSelectedName} isMobile={isMobile} setHoverCategories={setHoverCategories} hoverCategories={hoverCategories} hoveredQuarter={hoveredQuarter} setHoveredQuarter={setHoveredQuarter} data={selectedData} name={selectedName === "mosul" ? "Mosul, Iraq" : selectedName === "raqqa" ? "Raqqa, Syria" : "All"} />
             <CategoryBubbleChart isMobile={isMobile} hoverCategories={hoverCategories} setHoveredQuarter={setHoveredQuarter} hoveredQuarter={hoveredQuarter} data={selectedData} sizeScale={sizeScale} />
             {isMobile && <>
               <Credits>This data is available on <span>

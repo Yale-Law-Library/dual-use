@@ -58,7 +58,7 @@ const ClearItem = styled.div`
 `;
 
 export default function LineChart(props) {
-  const { data, name, setHoveredQuarter, hoveredQuarter, setHoverCategories, hoverCategories, isMobile } = props;
+  const { data, selectedName, setSelectedName, setHoveredQuarter, hoveredQuarter, setHoverCategories, hoverCategories, isMobile } = props;
   const svgRef = useRef();
   const margin = { top: 5, right: 8, bottom: 60, left: 40 };
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -389,6 +389,8 @@ export default function LineChart(props) {
         });
     });
 
+
+
     allCategories.forEach((category) => {
       const classSuffix = category.replace(/[^a-zA-Z0-9_-]/g, '-');
       const visible = hoverCategories.length === 0 || hoverCategories.includes(category);
@@ -411,12 +413,41 @@ export default function LineChart(props) {
       setHoverCategories(tempArr);
     }
   };
+  const allNames = [{ label: "Raqqa, Syria", value: "raqqa" }, { label: "Mosul, Iraq", value: "mosul" }, { label: "All", value: "all" }];
 
   return (
     <ChartContainer $width={isMobile ? 375 : 570}>
-      <Title>Targets, By Total Number in Press Releases per Quarter in <span style={{ color: "#156082", fontWeight: 600 }}>{name}</span> </Title>
-      <Legend>
+      <Title>
+        Targets, By Total Number in Press Releases per Quarter in{" "}
+        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', cursor: 'pointer', borderBottom: '2px solid #156082' }}>
+          <select
+            value={selectedName}
+            onChange={(e) => setSelectedName(e.target.value)}
+            style={{
+              color: "#156082",
+              fontWeight: 600,
+              fontSize: "16px",
+              border: "none",
+              background: "transparent",
+              appearance: "none",
+              WebkitAppearance: "none",
+              outline: "transparent",
+              padding: 0,
+              margin: "0 0 0 5px",
 
+              cursor: "pointer"
+            }}
+          >
+            {allNames.map((n) => (
+              <option key={n.value} value={n.value} style={{ color: "#000", backgroundColor: "#fff" }}>
+                {n.label}
+              </option>
+            ))}
+          </select>
+          <span style={{ color: '#156082', fontSize: '12px' }}>▼</span>
+        </div>
+      </Title>
+      <Legend>
         {Array.from(
           new Set(data.flatMap(d => d.categories.map(c => c.name)))
         ).map((name) => (

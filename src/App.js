@@ -109,6 +109,8 @@ padding: 10px;
 background: #ffffff;
 z-index:  2;
 width: 100%;
+position: sticky;
+top: 0;
 box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.1);
 `;
 const AppContainer = styled.div`
@@ -299,7 +301,7 @@ function App() {
 
           </MapContainer>
           <RightPanel style={{ padding: isMobile ? "10px 2px" : "0 10px 10px 10px" }}>
-            <Title style={isMobile ? { boxShadow: "none", width: "570px" } : {}}>
+            <Title style={isMobile ? { boxShadow: "none" } : {}}>
               Targets, By Total Number in Press Releases per Quarter in{" "}
               <div style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', cursor: 'pointer', borderBottom: '2px solid #156082' }}>
                 <select

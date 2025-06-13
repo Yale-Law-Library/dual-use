@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.3d069f2c.css",
-    "main.js": "/static/js/main.11d7383b.js",
+    "main.js": "/static/js/main.0a327013.js",
     "static/media/BennettTextFour.otf": "/static/media/BennettTextFour.cef41b7bf52fedcce7c6.otf",
     "static/media/map_group.svg": "/static/media/map_group.91091694a7e689f8d3e2a3cee902b866.svg",
     "static/media/background.svg": "/static/media/background.1bc2a128ace5a856138b2855a2f0047b.svg",
@@ -11,6 +11,6 @@
   },
   "entrypoints": [
     "static/css/main.3d069f2c.css",
-    "static/js/main.11d7383b.js"
+    "static/js/main.0a327013.js"
   ]
 }
